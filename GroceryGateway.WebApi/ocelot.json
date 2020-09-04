@@ -1,0 +1,228 @@
+{
+  "ReRoutes": [
+    //user api config
+    {
+      "DownstreamPathTemplate": "/api/user",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44378
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    //user api for register user
+    {
+      "DownstreamPathTemplate": "/api/user/Register",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44378
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user/Register",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    //user api for Update a user
+    {
+      "DownstreamPathTemplate": "/api/user/Updateuser/{UserId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44378
+        }
+      ],
+      "UpstreamPathTemplate": "/api/user/Updateuser/{UserId}",
+      "UpstreamHttpMethod": [ "GET", "PUT" ]
+    },
+    //Grocery api
+    {
+      "DownstreamPathTemplate": "/api/grocery",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    //Grocery api get Product By Id
+    {
+      "DownstreamPathTemplate": "/api/grocery/ProductById/{ProductId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery/ProductById/{ProductId}",
+      "UpstreamHttpMethod": [ "GET", "PUT" ]
+    },
+    //Grocery api get Product By Cat Id
+    {
+      "DownstreamPathTemplate": "/api/grocery/ProductByCategory/{CatId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery/ProductByCategory/{CatId}",
+      "UpstreamHttpMethod": [ "GET", "PUT" ]
+    },
+    //Grocery api get Product By Name
+    {
+      "DownstreamPathTemplate": "/api/grocery/Categorylist",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery/Categorylist",
+      "UpstreamHttpMethod": [ "GET", "PUT" ]
+    },
+    //Grocery api Place Order Placeorder/{ProductId}/{email}/{password}
+    {
+      "DownstreamPathTemplate": "/api/grocery/Placeorder/{ProductId}/{email}/{password}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery/Placeorder/{ProductId}/{email}/{password}",
+      "UpstreamHttpMethod": [ "GET", "PUT" ]
+    },
+    //Grocery api get Product by name
+    {
+      "DownstreamPathTemplate": "/api/grocery/ProductByName/{ProductName}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery/ProductByName/{ProductName}",
+      "UpstreamHttpMethod": [ "GET", "PUT" ]
+    },
+    //Grocery api config/ get all Order
+    {
+      "DownstreamPathTemplate": "/api/grocery/allorder",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery/allorder",
+      "UpstreamHttpMethod": [ "GET", "POST", "PUT", "DELETE" ]
+    },
+    //Grocery api for Add Category
+    {
+      "DownstreamPathTemplate": "/api/grocery/AddCategory",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery/AddCategory",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    //Grocery api for Add Product
+    {
+      "DownstreamPathTemplate": "/api/grocery/AddProduct",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery/AddProduct",
+      "UpstreamHttpMethod": [ "GET", "POST" ]
+    },
+    //Grocery api config/ Delete a single Remove category by Id
+    {
+      "DownstreamPathTemplate": "/api/grocery/Removecategory/{Id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery/Removecategory/{Id}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    //Grocery api config/ Delete a single Remove product ProductId
+    {
+      "DownstreamPathTemplate": "/api/grocery/Removeproduct/{ProductId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery/Removeproduct/{ProductId}",
+      "UpstreamHttpMethod": [ "GET", "DELETE" ]
+    },
+    //Grocery a category by passing Id and Update Model Value
+    {
+      "DownstreamPathTemplate": "/api/grocery/Updatecategory/{Id}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery/Updatecategory/{Id}",
+      "UpstreamHttpMethod": [ "GET", "PUT" ]
+    },
+    //Grocery a UpdateProduct by passing ProductId and Update Model Value
+    {
+      "DownstreamPathTemplate": "/api/grocery/UpdateProduct/{ProductId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery/UpdateProduct/{ProductId}",
+      "UpstreamHttpMethod": [ "GET", "PUT" ]
+    },
+    //Get a Order By Id
+    {
+      "DownstreamPathTemplate": "/api/grocery/OrderById/{OrderId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 44319
+        }
+      ],
+      "UpstreamPathTemplate": "/api/grocery/OrderById/{OrderId}",
+      "UpstreamHttpMethod": [ "GET" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "https://localhost:44340/"
+  }
+}

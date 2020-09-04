@@ -1,0 +1,5 @@
+Testfor_ValidateCategoryId=True
+Testfor_ValidateUserId=True
+Testfor_ValidEmail=True
+Testfor_ValidateProductId=True
+Testfor_ValidateMobileNumber=True

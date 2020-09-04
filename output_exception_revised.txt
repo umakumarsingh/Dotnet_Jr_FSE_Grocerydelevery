@@ -1,0 +1,5 @@
+Testfor_Validate_InValid_RemoveCategory=True
+Testfor_Validate_InvlidAddCategory=True
+Testfor_Validate_InValid_RemoveProduct=True
+Testfor_Validate_InvlidUserRegister=True
+Testfor_Validate_InvlidAddProduct=True
